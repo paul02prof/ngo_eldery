@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fondation CareHaven – Loger, nourrir et soigner nos aînés</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+  colors: { forest:'#042f2c', lime:'#e8f76a', mist:'#f1f1f0', ink:'#0b2b28' } } } }
+</script>
+<style>
+  :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  html{scroll-behavior:smooth}
+  body{background:#fff;color:#0b2b28}
+  .ph{background:linear-gradient(135deg,#d6c3a8,#8a6a4f);position:relative;overflow:hidden}
+  .ph>span{position:absolute;inset:auto 8px 8px 8px;font-size:11px;line-height:1.3;color:#fff;background:rgba(0,0,0,.45);padding:3px 6px;border-radius:6px;width:fit-content;max-width:calc(100% - 16px)}
+  .ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .on{background:#042f2c;color:#fff}
+  .lang-on{background:#e8f76a;color:#042f2c}
+  :focus-visible{outline:2px solid #e8f76a;outline-offset:2px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body class="font-sans antialiased">
+
+<header class="bg-forest text-white">
+  <nav class="max-w-6xl mx-auto px-5 py-5 flex items-center justify-between gap-3">
+    <a href="#" class="flex items-center gap-2 font-semibold text-lg"><span class="w-6 h-6 rounded bg-lime inline-block"></span>CareHaven</a>
+    <ul class="hidden md:flex gap-1 bg-white/10 rounded-lg p-1 text-sm">
+      <li><a class="px-3 py-1.5 block rounded-md bg-white/10" href="#" data-i="n1"></a></li>
+      <li><a class="px-3 py-1.5 block" href="#about" data-i="n2"></a></li>
+      <li><a class="px-3 py-1.5 block" href="#services" data-i="n3"></a></li>
+      <li><a class="px-3 py-1.5 block" href="#team" data-i="n4"></a></li>
+      <li><a class="px-3 py-1.5 block" href="#contact" data-i="n5"></a></li>
+    </ul>
+    <div class="flex items-center gap-2">
+      <div class="flex border border-white/30 rounded-lg p-0.5 text-xs" role="group" aria-label="Langue / Language">
+        <button class="langBtn px-2.5 py-1 rounded-md" data-lang="fr" aria-label="Français">FR</button>
+        <button class="langBtn px-2.5 py-1 rounded-md" data-lang="en" aria-label="English">EN</button>
+      </div>
+      <a href="#don" class="hidden sm:block bg-lime text-forest text-sm font-medium px-4 py-2 rounded-lg" data-i="donate"></a>
+      <button id="menuBtn" class="md:hidden border border-white/30 rounded-lg px-3 py-1.5 text-sm" aria-expanded="false" aria-controls="mobileMenu" data-i="menu"></button>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden px-5 pb-4 text-sm space-y-2">
+    <a class="block" href="#about" data-i="n2"></a><a class="block" href="#services" data-i="n3"></a><a class="block" href="#don" data-i="donate"></a><a class="block" href="#contact" data-i="n5"></a>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-8 items-stretch">
+    <div class="py-10 md:py-16 flex flex-col">
+      <p class="text-sm text-white/80 mb-4" data-i="badge"></p>
+      <h1 class="text-4xl md:text-5xl font-medium leading-tight" data-i="h1"></h1>
+      <p class="mt-5 text-sm text-white/70 max-w-sm" data-i="hp"></p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#don" class="bg-lime text-forest text-sm font-medium px-5 py-2.5 rounded-lg" data-i="donate"></a>
+        <a href="#team" class="border border-white/40 text-sm px-5 py-2.5 rounded-lg" data-i="volunteer"></a>
+      </div>
+      <dl class="mt-auto pt-14 grid grid-cols-3 gap-4 max-w-md">
+        <div><dt class="text-2xl font-medium">120</dt><dd class="text-xs text-white/60" data-i="s1"></dd></div>
+        <div><dt class="text-2xl font-medium">60&nbsp;000</dt><dd class="text-xs text-white/60" data-i="s2"></dd></div>
+        <div><dt class="text-2xl font-medium">2&nbsp;400</dt><dd class="text-xs text-white/60" data-i="s3"></dd></div>
+      </dl>
+    </div>
+    <div class="ph min-h-[320px] md:min-h-0 rounded-t-3xl md:rounded-none" data-img="hero"><span data-i="img_hero"></span></div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5 py-7 flex flex-wrap items-center justify-between gap-6 text-white/60 font-medium text-sm">
+      <span data-i="partners"></span><span>Sawa Clinic</span><span>Kribi Santé</span><span>Mont Cameroun Assur</span><span>Pharma Bastos</span><span>Ekang Mutuelle</span>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-2 gap-10">
+  <div>
+    <p class="text-xs mb-3" data-i="a_tag"></p>
+    <h2 class="text-3xl md:text-4xl font-medium leading-tight" data-i="a_h"></h2>
+    <p class="mt-4 text-xs text-ink/60 max-w-sm" data-i="a_p"></p>
+    <div class="mt-6 grid grid-cols-[1.4fr_1fr] gap-3">
+      <div class="ph h-40 rounded-xl" data-img="about"><span data-i="img_about"></span></div>
+      <div class="bg-forest text-white rounded-xl p-4 flex flex-col justify-between"><span class="text-3xl font-medium">15+</span><span class="text-xs text-white/70" data-i="a_years"></span></div>
+    </div>
+    <ul class="mt-6 text-sm divide-y border-y">
+      <li class="flex justify-between py-3"><span><span class="text-ink/40 mr-6">01</span><span data-i="a_l1"></span></span><span>↗</span></li>
+      <li class="flex justify-between py-3"><span><span class="text-ink/40 mr-6">02</span><span data-i="a_l2"></span></span><span>↗</span></li>
+    </ul>
+  </div>
+
+  <div id="don" class="bg-mist rounded-3xl p-5 sm:p-8 self-start scroll-mt-6">
+    <div class="bg-white rounded-2xl p-5 shadow-sm">
+      <div class="mb-4">
+        <h3 class="text-sm font-medium" data-i="g_title"></h3>
+        <p class="text-xs text-ink/50" data-i="g_sub"></p>
+      </div>
+      <div class="flex gap-2 text-xs mb-4" role="tablist">
+        <button class="tab px-3 py-1.5 rounded-md on" data-tab="once" data-i="tab1"></button>
+        <button class="tab px-3 py-1.5 rounded-md text-ink/60" data-tab="monthly" data-i="tab2"></button>
+        <button class="tab px-3 py-1.5 rounded-md text-ink/60" data-tab="sponsor" data-i="tab3"></button>
+      </div>
+      <div id="amts" class="grid grid-cols-3 gap-2 text-xs mb-4"></div>
+      <p id="impact" class="text-xs text-ink/70 min-h-[2.5rem]"></p>
+      <button id="give" class="mt-3 w-full bg-forest text-white text-sm py-2.5 rounded-lg"></button>
+      <p id="thx" class="mt-3 text-xs text-ink/70" aria-live="polite"></p>
+      <p class="mt-3 text-[11px] text-ink/45" data-i="g_pay"></p>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-5 py-10 grid md:grid-cols-2 gap-10">
+  <div class="ph rounded-2xl min-h-[360px] md:min-h-[480px]" data-img="nurse"><span data-i="img_nurse"></span></div>
+  <div class="flex flex-col">
+    <h2 class="text-3xl md:text-4xl font-medium leading-tight" data-i="p_h"></h2>
+    <a href="#team" class="mt-6 self-start bg-forest text-white text-sm px-5 py-2.5 rounded-lg" data-i="volunteer"></a>
+    <div class="mt-auto pt-10 grid grid-cols-2 gap-4">
+      <article class="bg-mist rounded-2xl p-5 min-h-[170px] flex flex-col justify-between"><span class="text-xs text-ink/50">01</span><div><h3 class="text-sm font-medium" data-i="c1t"></h3><p class="text-xs text-ink/50" data-i="c1d"></p></div></article>
+      <article class="bg-mist rounded-2xl p-5 min-h-[170px] flex flex-col justify-between"><span class="text-xs text-ink/50">02</span><div><h3 class="text-sm font-medium" data-i="c2t"></h3><p class="text-xs text-ink/50" data-i="c2d"></p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-3 gap-8">
+  <div>
+    <p class="text-xs mb-3" data-i="sv_tag"></p>
+    <h2 class="text-3xl md:text-4xl font-medium leading-tight" data-i="sv_h"></h2>
+    <a href="#contact" class="mt-6 inline-block bg-forest text-white text-sm px-5 py-2.5 rounded-lg" data-i="sv_cta"></a>
+  </div>
+  <ul id="svcList" class="text-sm border-t"></ul>
+  <div>
+    <div class="ph rounded-xl h-40" data-img="svc"><span data-i="img_svc"></span></div>
+    <h3 id="svcTitle" class="mt-4 font-medium"></h3>
+    <p id="svcText" class="mt-2 text-xs text-ink/60"></p>
+  </div>
+</section>
+
+<section class="bg-forest text-white py-16">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-center text-3xl md:text-4xl font-medium" data-i="d_h"></h2>
+    <p class="mt-4 text-center text-xs text-white/60 max-w-md mx-auto" data-i="d_p"></p>
+    <div class="mt-12 divide-y divide-white/15 border-t border-white/15">
+      <article class="grid md:grid-cols-[1fr_1.2fr_auto_auto] gap-4 items-center py-6">
+        <h3 class="font-medium" data-i="r1t"></h3><p class="text-xs text-white/60 max-w-xs" data-i="r1d"></p>
+        <div class="ph w-28 h-24 rounded-lg" data-img="r1"></div><a href="#don" aria-label="Don" class="hidden md:grid w-8 h-8 rounded-full border border-white/30 place-items-center text-lime">↗</a>
+      </article>
+      <article class="grid md:grid-cols-[1fr_1.2fr_auto_auto] gap-4 items-center py-6">
+        <h3 class="font-medium" data-i="r2t"></h3><p class="text-xs text-white/60 max-w-xs" data-i="r2d"></p>
+        <div class="ph w-28 h-24 rounded-lg" data-img="r2"></div><a href="#don" aria-label="Don" class="hidden md:grid w-8 h-8 rounded-full border border-white/30 place-items-center text-lime">↗</a>
+      </article>
+      <article class="grid md:grid-cols-[1fr_1.2fr_auto_auto] gap-4 items-center py-6">
+        <h3 class="font-medium" data-i="r3t"></h3><p class="text-xs text-white/60 max-w-xs" data-i="r3d"></p>
+        <div class="ph w-28 h-24 rounded-lg" data-img="r3"></div><a href="#don" aria-label="Don" class="hidden md:grid w-8 h-8 rounded-full border border-white/30 place-items-center text-lime">↗</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-[1fr_1.6fr] gap-10 scroll-mt-6">
+  <div>
+    <h2 class="text-3xl md:text-4xl font-medium leading-tight" data-i="st_h"></h2>
+    <p class="mt-4 text-xs text-ink/60 max-w-xs" data-i="st_p"></p>
+    <a href="#contact" class="mt-6 inline-block bg-forest text-white text-sm px-4 py-2 rounded-lg" data-i="st_cta"></a>
+  </div>
+  <div class="grid grid-cols-2 gap-3">
+    <figure class="ph rounded-xl h-44" data-img="v1"><figcaption class="absolute top-2 left-3 right-3 text-xs text-white z-10" data-i="v1"></figcaption><span data-i="img_v1"></span></figure>
+    <figure class="ph rounded-xl row-span-2 min-h-[280px]" data-img="v2"><figcaption class="absolute top-2 left-3 right-3 text-xs text-white z-10" data-i="v2"></figcaption><span data-i="img_v2"></span></figure>
+    <figure class="ph rounded-xl h-44" data-img="v3"><figcaption class="absolute top-2 left-3 right-3 text-xs text-white z-10" data-i="v3"></figcaption><span data-i="img_v3"></span></figure>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-5 pb-16">
+  <div class="flex flex-wrap justify-between gap-4 mb-8">
+    <h2 class="text-3xl md:text-4xl font-medium leading-tight" data-i="t_h"></h2>
+    <p class="text-xs text-ink/60 max-w-xs" data-i="t_p"></p>
+  </div>
+  <div class="grid md:grid-cols-[1fr_1.5fr_1fr] gap-5">
+    <div class="ph rounded-2xl min-h-[300px]" data-img="patient"><span data-i="img_patient"></span></div>
+    <blockquote class="bg-mist rounded-2xl p-6 flex flex-col justify-between">
+      <span class="text-xs text-ink/50" data-i="t_tag"></span>
+      <p id="quote" class="text-lg font-medium leading-snug my-6"></p>
+      <div class="flex justify-between text-sm"><span id="city" class="font-medium"></span><span id="rate"></span></div>
+    </blockquote>
+    <div class="flex flex-col justify-between">
+      <div><p id="who" class="font-medium"></p><p id="role" class="text-xs text-ink/50"></p></div>
+      <div class="flex gap-2 mt-6">
+        <button id="prev" class="w-10 h-10 rounded-full border" aria-label="Précédent">←</button>
+        <button id="next" class="w-10 h-10 rounded-full border" aria-label="Suivant">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="bg-forest text-white pt-12 pb-6">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="border border-white/20 rounded-xl p-6 text-center"><p class="text-lime font-medium" data-i="f_phone"></p><p class="text-xs text-white/60 mt-1">+237 6 55 55 01 03</p></div>
+      <div class="border border-white/20 rounded-xl p-6 text-center"><p class="text-lime font-medium" data-i="f_addr"></p><p class="text-xs text-white/60 mt-1" data-i="f_addrv"></p></div>
+      <div class="border border-white/20 rounded-xl p-6 text-center"><p class="text-lime font-medium" data-i="f_mail"></p><p class="text-xs text-white/60 mt-1">contact@carehaven.cm</p></div>
+    </div>
+    <div class="mt-12 grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8 text-xs text-white/70">
+      <div><p class="text-white font-semibold text-base mb-3">CareHaven</p><p class="max-w-xs" data-i="f_desc"></p></div>
+      <nav class="space-y-2"><p class="text-white font-medium mb-3" data-i="ql"></p><a class="block" href="#" data-i="n1"></a><a class="block" href="#about" data-i="n2"></a><a class="block" href="#services" data-i="n3"></a><a class="block" href="#team" data-i="volunteer"></a><a class="block" href="#contact" data-i="n5"></a></nav>
+      <nav class="space-y-2"><p class="text-white font-medium mb-3" data-i="n3"></p><a class="block" href="#services" data-i="l1"></a><a class="block" href="#services" data-i="l2"></a><a class="block" href="#services" data-i="l3"></a><a class="block" href="#services" data-i="l4"></a></nav>
+      <nav class="space-y-2"><p class="text-white font-medium mb-3" data-i="f_help"></p><a class="block" href="#don" data-i="tab1"></a><a class="block" href="#don" data-i="tab2"></a><a class="block" href="#don" data-i="tab3"></a><a class="block" href="#contact" data-i="k4"></a></nav>
+    </div>
+    <div class="mt-10 pt-5 border-t border-white/15 flex flex-wrap justify-between gap-3 text-xs text-white/60">
+      <div class="flex gap-2"><a href="#" aria-label="X" class="w-7 h-7 rounded border border-white/30 grid place-items-center">X</a><a href="#" aria-label="Facebook" class="w-7 h-7 rounded border border-white/30 grid place-items-center">f</a><a href="#" aria-label="WhatsApp" class="w-7 h-7 rounded border border-white/30 grid place-items-center">W</a><a href="#" aria-label="YouTube" class="w-7 h-7 rounded border border-white/30 grid place-items-center">▶</a></div>
+      <p data-i="f_rights"></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* IMAGES : indiquez l’URL (ou data URI) de chaque photo. Vide = zone suggérée. */
+const IMAGES = { hero:'', about:'', nurse:'', svc:'', r1:'', r2:'', r3:'', v1:'', v2:'', v3:'', patient:'' };
+
+const D = {
+fr:{
+ menu:'Menu',n1:'Accueil',n2:'Notre mission',n3:'Programmes',n4:'Bénévolat',n5:'Contact',
+ donate:'Faire un don',volunteer:'Devenir bénévole',
+ badge:'Fondation à but non lucratif · Cameroun',
+ h1:'Chaque ancien mérite un toit, un repas et des soins.',
+ hp:'Depuis plus de 15 ans, la Fondation CareHaven accueille, nourrit et soigne les personnes âgées seules ou en difficulté, à Yaoundé, Douala et dans les villages alentour.',
+ s1:'Aînés hébergés',s2:'Repas servis par an',s3:'Bilans de santé réalisés',
+ partners:'Ils nous soutiennent',
+ a_tag:'✦ Notre mission',a_h:'Là où nos aînés<br>retrouvent une famille',
+ a_p:'Au Cameroun, on dit que « le vieux qui meurt, c’est une bibliothèque qui brûle ». Nos aînés ont élevé nos familles et bâti nos villages. Nous leur offrons un logement sûr, des repas équilibrés, un suivi médical et surtout de la compagnie.',
+ a_years:'Années d’engagement',a_l1:'Hébergement digne',a_l2:'Repas équilibrés chaque jour',
+ g_title:'Soutenez un aîné',g_sub:'Chaque contribution compte, quel que soit son montant.',
+ tab1:'Don ponctuel',tab2:'Don mensuel',tab3:'Parrainage',
+ per:' / mois',give:'Donner',thx:'Merci pour votre générosité ! (démonstration : aucun paiement réel)',
+ g_pay:'Paiement par Mobile Money, carte bancaire ou virement. Un reçu vous est envoyé par e-mail.',
+ imp:['assure des repas chauds à un aîné pendant 3 jours.','offre un bilan de santé complet à un aîné.','couvre une semaine d’hébergement et de repas pour un aîné.','finance un mois de médicaments pour 5 aînés.','équipe une chambre : lit, matelas, moustiquaire et literie.'],
+ imp_sp:'Parrainez un aîné : ce montant couvre son logement, ses repas et son suivi médical pendant un mois. Vous recevez de ses nouvelles chaque trimestre.',
+ imp_pre:'Votre don de ',
+ p_h:'Ils ont bâti nos familles. Notre devoir est de les accompagner jusqu’au bout, avec respect.',
+ c1t:'Un toit pour chacun',c1d:'Un hébergement sûr et chaleureux pour les aînés seuls, malades ou abandonnés',
+ c2t:'Une assiette pleine',c2d:'Trois repas par jour, une cuisine du pays : ndolé, plantain, poisson braisé',
+ sv_tag:'✦ Nos programmes',sv_h:'Un accompagnement complet, de l’accueil aux soins',sv_cta:'Nous contacter',
+ d_h:'Votre don,<br>des vies qui changent.',
+ d_p:'100 % de votre don finance nos programmes : hébergement, alimentation et santé. Nous publions chaque année un rapport clair sur l’usage des fonds.',
+ r1t:'Un toit digne',r1d:'Des chambres propres et sûres, avec un lit, une moustiquaire et de l’eau potable.',
+ r2t:'Des repas chauds',r2d:'Trois repas par jour, préparés sur place avec des produits des marchés locaux.',
+ r3t:'Un suivi médical régulier',r3d:'Bilans gratuits, tension, glycémie, vue et médicaments, avec nos médecins bénévoles.',
+ st_h:'Devenez bénévole. Donnez un peu de votre temps.',
+ st_p:'Médecin, infirmière, cuisinier, étudiant ou simple voisin&nbsp;? Une visite, un repas partagé ou une partie de songo peut changer la semaine d’un ancien.',
+ st_cta:'Nous rejoindre',
+ v1:'Papa Nkoulou a retrouvé un toit à Mvog-Ada',v2:'Maman Ngo Bassong refleurit grâce à vos dons',v3:'Un après-midi de jeux à Bonapriso',
+ t_h:'Ils témoignent',t_p:'Résidents, familles et bénévoles racontent ce que la fondation a changé dans leur vie.',
+ t_tag:'Témoignage',
+ f_phone:'Téléphone',f_addr:'Adresse',f_addrv:'Rue 1.839, Bastos, Yaoundé, Cameroun',f_mail:'E-mail',
+ f_desc:'La Fondation CareHaven loge, nourrit et soigne les personnes âgées en difficulté au Cameroun, avec respect et humanité.',
+ ql:'Liens rapides',l1:'Hébergement',l2:'Repas',l3:'Bilans de santé',l4:'Accompagnement social',
+ f_help:'Nous soutenir',k4:'Don en nature (vivres, médicaments)',
+ f_rights:'© 2026 Fondation CareHaven. Tous droits réservés.',
+ img_hero:'Photo suggérée&nbsp;: des aînés camerounais souriants partagent un repas dans la cour de la fondation',
+ img_about:'Photo suggérée&nbsp;: des aînés jouent au songo avec une bénévole',
+ img_nurse:'Photo suggérée&nbsp;: une infirmière noire prend la tension d’un grand-père (bilan de santé)',
+ img_svc:'Photo suggérée&nbsp;: une médecin noire ausculte une aînée',
+ img_v1:'Vidéo&nbsp;: un aîné devant sa nouvelle chambre',img_v2:'Vidéo&nbsp;: une grand-mère souriante avec une bénévole',img_v3:'Vidéo&nbsp;: aînés et enfants jouant ensemble',
+ img_patient:'Photo suggérée&nbsp;: portrait d’une dame âgée noire, souriante, assise dans la cour',
+ svc:[['Hébergement','Des chambres sûres et propres pour les aînés sans famille ou sans ressources, avec une équipe présente jour et nuit.'],['Repas et nutrition','Trois repas par jour, adaptés aux besoins de chacun (diabète, hypertension), préparés sur place.'],['Bilans de santé gratuits','Tension, glycémie, vue, dépistages et consultations régulières avec nos médecins et infirmières bénévoles.'],['Soins infirmiers','Pansements, injections, suivi des traitements et accompagnement vers les hôpitaux partenaires.'],['Accompagnement social','Aide pour les papiers, la pension, les démarches juridiques et le lien avec les familles.'],['Soutien moral','Écoute, visites, prière et rencontres pour rompre l’isolement.'],['Activités et loisirs','Songo, musique, jardinage, contes et fêtes. Pour que chaque jour ait un sens.'],['Visites dans les villages','Nos équipes mobiles vont à la rencontre des aînés isolés pour un bilan, des vivres et du réconfort.']],
+ sel:2,
+ amts:[5000,10000,25000,50000,100000],sp:30000,
+ T:[['Ici, je ne suis plus seul. On m’a donné une chambre, des repas chauds et un médecin qui me connaît par mon nom.','Papa Nkoulou, 82 ans','Résident, Yaoundé','5/5'],['Depuis Paris, je dormais mal. Maintenant je reçois des nouvelles de maman chaque semaine, et je sais qu’elle est entourée.','Marie-Claire Nkeng','Fille d’une résidente, Douala','5/5'],['Chaque samedi, je viens faire les bilans de santé. Voir leur sourire après une consultation, rien ne vaut ça.','Dr Aminatou Bello','Bénévole, médecin','5/5']]
+},
+en:{
+ menu:'Menu',n1:'Home',n2:'Our mission',n3:'Programs',n4:'Volunteer',n5:'Contact',
+ donate:'Donate',volunteer:'Become a volunteer',
+ badge:'Non-profit foundation · Cameroon',
+ h1:'Every elder deserves a roof, a meal and care.',
+ hp:'For over 15 years, the CareHaven Foundation has housed, fed and cared for elderly people who are alone or struggling, in Yaoundé, Douala and nearby villages.',
+ s1:'Elders housed',s2:'Meals served a year',s3:'Health check-ups done',
+ partners:'Our supporters',
+ a_tag:'✦ Our mission',a_h:'Where our elders<br>find a family again',
+ a_p:'In Cameroon, they say an old person who dies is a library that burns. Our elders raised our families and built our villages. We give them safe housing, balanced meals, medical follow-up and, above all, company.',
+ a_years:'Years of commitment',a_l1:'Dignified housing',a_l2:'Balanced meals every day',
+ g_title:'Support an elder',g_sub:'Every contribution counts, whatever the amount.',
+ tab1:'One-time gift',tab2:'Monthly gift',tab3:'Sponsorship',
+ per:' / month',give:'Donate',thx:'Thank you for your generosity! (demo: no real payment)',
+ g_pay:'Pay by Mobile Money, bank card or transfer. A receipt is sent to you by email.',
+ imp:['provides hot meals for one elder for 3 days.','pays for a full health check-up for one elder.','covers a week of housing and meals for one elder.','funds a month of medication for 5 elders.','furnishes a room: bed, mattress, mosquito net and bedding.'],
+ imp_sp:'Sponsor an elder: this amount covers housing, meals and medical follow-up for a month. You get news of them every quarter.',
+ imp_pre:'Your gift of ',
+ p_h:'They built our families. Our duty is to walk with them to the end, with respect.',
+ c1t:'A roof for everyone',c1d:'Safe, warm housing for elders who are alone, ill or abandoned',
+ c2t:'A full plate',c2d:'Three meals a day, local cooking: ndolé, plantain, grilled fish',
+ sv_tag:'✦ Our programs',sv_h:'Complete support, from welcome to care',sv_cta:'Contact us',
+ d_h:'Your gift,<br>lives changed.',
+ d_p:'100% of your gift funds our programs: housing, food and health. Each year we publish a clear report on how funds are used.',
+ r1t:'A dignified home',r1d:'Clean, safe rooms with a bed, a mosquito net and clean drinking water.',
+ r2t:'Hot meals',r2d:'Three meals a day, cooked on site with produce from local markets.',
+ r3t:'Regular medical follow-up',r3d:'Free check-ups for blood pressure, blood sugar, eyesight and medication, with our volunteer doctors.',
+ st_h:'Become a volunteer. Give a little of your time.',
+ st_p:'Doctor, nurse, cook, student or simply a neighbor? A visit, a shared meal or a game of songo can change an elder’s week.',
+ st_cta:'Join us',
+ v1:'Papa Nkoulou found a home in Mvog-Ada',v2:'Mama Ngo Bassong blooms thanks to your gifts',v3:'An afternoon of games in Bonapriso',
+ t_h:'In their words',t_p:'Residents, families and volunteers share what the foundation has changed in their lives.',
+ t_tag:'Testimonial',
+ f_phone:'Phone number',f_addr:'Address',f_addrv:'Rue 1.839, Bastos, Yaoundé, Cameroon',f_mail:'Email address',
+ f_desc:'The CareHaven Foundation houses, feeds and cares for elderly people in need across Cameroon, with respect and humanity.',
+ ql:'Quick links',l1:'Housing',l2:'Meals',l3:'Health check-ups',l4:'Social support',
+ f_help:'Support us',k4:'In-kind gifts (food, medicine)',
+ f_rights:'© 2026 CareHaven Foundation. All rights reserved.',
+ img_hero:'Suggested photo: smiling Cameroonian elders sharing a meal in the foundation courtyard',
+ img_about:'Suggested photo: elders playing songo with a volunteer',
+ img_nurse:'Suggested photo: a Black nurse taking a grandfather’s blood pressure (health check-up)',
+ img_svc:'Suggested photo: a Black doctor examining an elderly woman',
+ img_v1:'Video: an elder in front of his new room',img_v2:'Video: a smiling grandmother with a volunteer',img_v3:'Video: elders and children playing together',
+ img_patient:'Suggested photo: portrait of a smiling elderly Black woman seated in the courtyard',
+ svc:[['Housing','Safe, clean rooms for elders without family or income, with staff present day and night.'],['Meals and nutrition','Three meals a day, adapted to each person’s needs (diabetes, hypertension), cooked on site.'],['Free health check-ups','Blood pressure, blood sugar, eyesight, screenings and regular consultations with our volunteer doctors and nurses.'],['Nursing care','Dressings, injections, treatment follow-up and referrals to partner hospitals.'],['Social support','Help with paperwork, pensions, legal steps and keeping in touch with families.'],['Moral support','Listening, visits, prayer and gatherings to break isolation.'],['Activities and leisure','Songo, music, gardening, storytelling and celebrations, so every day has meaning.'],['Village outreach','Mobile teams reach isolated elders with check-ups, food and comfort.']],
+ sel:2,
+ amts:[5000,10000,25000,50000,100000],sp:30000,
+ T:[['Here, I am no longer alone. I was given a room, hot meals and a doctor who knows me by name.','Papa Nkoulou, 82','Resident, Yaoundé','5/5'],['From Paris, I slept badly. Now I get news of Mum every week, and I know she is surrounded by people who care.','Marie-Claire Nkeng','Daughter of a resident, Douala','5/5'],['Every Saturday I come to do the health checks. Nothing beats seeing their smiles after a consultation.','Dr Aminatou Bello','Volunteer, physician','5/5']]
+}};
+
+let lang='fr';
+try{const s=localStorage.getItem('ch-lang');if(s==='fr'||s==='en')lang=s}catch(e){}
+const $=id=>document.getElementById(id);
+let tab='once',amt=1,sa=2,ti=0,thanks=false;
+const fmt=n=>n.toLocaleString(lang==='fr'?'fr-FR':'en-US').replace(/[\u202f\u00a0]/g,'\u00a0');
+
+function drawGift(){
+  const d=D[lang],sp=tab==='sponsor';
+  $('amts').classList.toggle('hidden',sp);
+  $('amts').innerHTML=d.amts.map((a,i)=>`<button data-i="${i}" class="py-2 rounded-md border ${i===amt?'on':''}">${fmt(a)}</button>`).join('');
+  const val=sp?d.sp:d.amts[amt],per=tab==='once'?'':d.per;
+  $('impact').innerHTML=sp?d.imp_sp:`${d.imp_pre}<b>${fmt(val)}&nbsp;FCFA</b> ${d.imp[amt]}`;
+  $('give').textContent=`${d.give} ${fmt(val)} FCFA${per}`;
+  $('thx').textContent=thanks?d.thx:'';
+}
+function drawSvc(){
+  const s=D[lang].svc;
+  $('svcList').innerHTML=s.map((x,i)=>`<li><button data-i="${i}" class="w-full flex justify-between items-center px-3 py-3 border-b text-left ${i===sa?'bg-lime font-medium':''}"><span>${x[0]}</span>${i===sa?'<span>→</span>':''}</button></li>`).join('');
+  $('svcTitle').textContent=s[sa][0];$('svcText').textContent=s[sa][1];
+}
+function drawT(){
+  const t=D[lang].T[ti];
+  $('quote').textContent='“'+t[0]+'”';$('who').textContent=t[1];$('role').textContent=t[2];$('city').textContent=t[2].split(', ').pop();$('rate').textContent=t[3]+' ★';
+}
+function applyLang(){
+  const d=D[lang];
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i]').forEach(el=>{const v=d[el.dataset.i];if(typeof v==='string')el.innerHTML=v});
+  document.querySelectorAll('.langBtn').forEach(b=>{const on=b.dataset.lang===lang;b.classList.toggle('lang-on',on);b.setAttribute('aria-pressed',on)});
+  $('prev').setAttribute('aria-label',lang==='fr'?'Précédent':'Previous');
+  $('next').setAttribute('aria-label',lang==='fr'?'Suivant':'Next');
+  drawGift();drawSvc();drawT();
+}
+document.querySelectorAll('.langBtn').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;try{localStorage.setItem('ch-lang',lang)}catch(e){}applyLang()});
+
+document.querySelectorAll('[data-img]').forEach(el=>{const u=IMAGES[el.dataset.img];if(u){const i=new Image();i.src=u;i.alt='';el.prepend(i);const sp=el.querySelector(':scope>span');if(sp)sp.remove()}});
+
+const mb=$('menuBtn'),mm=$('mobileMenu');
+mb.onclick=()=>{const h=mm.classList.toggle('hidden');mb.setAttribute('aria-expanded',String(!h))};
+
+$('amts').onclick=e=>{const b=e.target.closest('button');if(b){amt=+b.dataset.i;thanks=false;drawGift()}};
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.className='tab px-3 py-1.5 rounded-md text-ink/60');
+  t.className='tab px-3 py-1.5 rounded-md on';tab=t.dataset.tab;thanks=false;drawGift();
+});
+$('give').onclick=()=>{thanks=true;drawGift()};
+$('svcList').onclick=e=>{const b=e.target.closest('button');if(b){sa=+b.dataset.i;drawSvc()}};
+$('prev').onclick=()=>{ti=(ti+2)%3;drawT()};
+$('next').onclick=()=>{ti=(ti+1)%3;drawT()};
+applyLang();
+</script>
+</body>
+</html>
